@@ -5,9 +5,9 @@ public class Main {
         Human kate = new Human(1992, "Катя", "Калининград", "Продакт-менеджер");
         Human artem = new Human(1995, "Артем", "Москва", "Директор по развитию бизнеса");
 
-        max.InformationOfHuman();
-        annie.InformationOfHuman();
-        kate.InformationOfHuman();
-        artem.InformationOfHuman();
+        System.out.println(max);
+        System.out.println(annie);
+        System.out.println(kate);
+        System.out.println(artem);
     }
 }
