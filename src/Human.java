@@ -10,17 +10,22 @@ public class Human {
         } else {
             this.yearOfBirth = Math.abs(yearOfBirth);
         }
+        if (name == null || name.isEmpty()) {
+            name = "Информация не указана";
+        }
         this.name = name;
+        if (town == null || town.isEmpty()) {
+            town = "Информация не указана";
+        }
         this.town = town;
+        if (jobTitle == null || jobTitle.isEmpty()) {
+            jobTitle = "Информация не указана";
+        }
         this.jobTitle = jobTitle;
     }
 
     @Override
     public String toString() {
-        if (name == null || name.isEmpty() || town == null || town.isEmpty() || jobTitle == null || jobTitle.isEmpty()) {
-            return "Информация не указана";
-        } else {
             return "Привет! Меня зовут " + name + ". Я из города " + town + ". Я родился в " + yearOfBirth + " году. Я работаю на должности "+ jobTitle +". Будем знакомы!";
-        }
     }
 }
