@@ -1,28 +1,65 @@
 public class Human {
-    final int yearOfBirth;
-    final String name;
-    String town;
-    String jobTitle;
+    private final int yearOfBirth;
+    private String name;
+    private String town;
+    private String jobTitle;
 
     public Human(int yearOfBirth, String name, String town, String jobTitle) {
-        if (yearOfBirth >= 0) {
+        if (yearOfBirth >= 0 ) {
             this.yearOfBirth = yearOfBirth;
         } else {
-            this.yearOfBirth = Math.abs(yearOfBirth);
+            this.yearOfBirth = 0;
         }
-        if (name == null || name.isEmpty()) {
+        if (name == null || name.isEmpty() || name.isBlank()) {
             name = "Информация не указана";
         }
         this.name = name;
-        if (town == null || town.isEmpty()) {
+        if (town == null || town.isEmpty() || town.isBlank()) {
             town = "Информация не указана";
         }
         this.town = town;
-        if (jobTitle == null || jobTitle.isEmpty()) {
+        if (jobTitle == null || jobTitle.isEmpty() || jobTitle.isBlank()) {
             jobTitle = "Информация не указана";
         }
         this.jobTitle = jobTitle;
     }
+
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+
+
+    public void setTown(String town) {
+        if (town == null || town.isEmpty() || town.isBlank()) {
+            this.town = "Информация не указана";
+        } else {
+            this.town = town;
+        }
+    }
+
+    public void setJobTitle(String jobTitle) {
+        if (jobTitle == null || jobTitle.isEmpty() || jobTitle.isBlank()) {
+            this.jobTitle = "Информация не указана";
+        } else {
+            this.jobTitle = jobTitle;
+        }
+
+    }
+
 
     @Override
     public String toString() {
