@@ -6,7 +6,7 @@ public class Main {
         Human annie = new Human(1993, "Анна", "Москва", "Методист образовательных программ");
         Human kate = new Human(1992, "Катя", "Калининград", "Продакт-менеджер");
         Human artem = new Human(1995, "Артем", "Москва", "Директор по развитию бизнеса");
-        Human vladimir = new Human(2001, "Владимир", "Казань", "Безработный");
+        Human vladimir = new Human(2001, "Владимир", "Казань", "");
 
         System.out.println(max);
         System.out.println(annie);
@@ -14,9 +14,11 @@ public class Main {
         System.out.println(artem);
         System.out.println(vladimir);
         System.out.println();
+
         annie.setTown("    ");
-        vladimir.setJobTitle("Технолог");
         System.out.println(annie);
+
+        vladimir.setJobTitle("Технолог");
         System.out.println(vladimir);
     }
 }
